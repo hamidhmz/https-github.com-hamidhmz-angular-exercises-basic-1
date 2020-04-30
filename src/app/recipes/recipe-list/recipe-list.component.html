@@ -1,0 +1,49 @@
+<div class="row">
+  <div class="col-xs-12">
+    <label for="name" class="col-form-label">this is name of recipe</label>
+    <input
+      type="text"
+      placeholder="this is name of recipe"
+      class="form-control"
+      [(ngModel)]="nameOfRecipe"
+    />
+    <label for="description" class="col-form-label"
+      >this is description of recipe</label
+    >
+    <input
+      type="text"
+      placeholder="this is description of recipe"
+      class="form-control"
+      [(ngModel)]="descriptionOfRecipe"
+    />
+
+    <label for="imagePath" class="col-form-label"
+      >this is imagePath of recipe</label
+    >
+    <input
+      type="text"
+      placeholder="this is pathOfRecipe of recipe"
+      class="form-control"
+      [(ngModel)]="pathOfRecipe"
+    />
+    <button class="btn btn-success" (click)="onclickForCreate()">
+      New Recipe
+    </button>
+  </div>
+</div>
+<hr />
+<div class="row" *ngFor="let item of recipes">
+  <div class="col-xs-12">
+    <a href="#" class="list-group-item clearfix">
+      <div class="pull-left">
+        <h4 class="list-group-item-heading">{{ item.name }}</h4>
+        <p class="list-group-item-text">{{ item.description }}</p>
+      </div>
+      <span class="pull-right"
+        ><img [src]="item.imagePath" alt="" class="img-thumbnail"
+      /></span>
+    </a>
+  </div>
+</div>
+
+<app-recipe-item></app-recipe-item>
