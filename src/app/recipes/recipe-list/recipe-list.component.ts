@@ -8,24 +8,15 @@ import { Recipe } from '../recipe.model';
 export class RecipeListComponent implements OnInit {
   recipes: Recipe[] = [];
   constructor() {}
-  nameOfRecipe: string;
-  descriptionOfRecipe: string;
-  pathOfRecipe: string;
 
-  onclickForCreate() {
-    if (this.nameOfRecipe && this.descriptionOfRecipe && this.pathOfRecipe) {
-      this.createNew(
-        this.nameOfRecipe,
-        this.descriptionOfRecipe,
-        this.pathOfRecipe
-      );
-      this.nameOfRecipe = '';
-      this.descriptionOfRecipe = '';
-      this.pathOfRecipe = '';
-    }
-  }
-  createNew(name, description, imagePath) {
-    this.recipes.push(new Recipe(name, description, imagePath));
+  createNew(data: {
+    nameOfRecipe: string;
+    descriptionOfRecipe: string;
+    pathOfRecipe: string;
+  }) {
+    this.recipes.push(
+      new Recipe(data.nameOfRecipe, data.descriptionOfRecipe, data.pathOfRecipe)
+    );
   }
   ngOnInit(): void {}
 }

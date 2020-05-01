@@ -1,0 +1,53 @@
+<form>
+  <div class="form-group">
+    <label for="name" class="col-form-label">this is name of recipe</label>
+    <!-- <input
+      id="name"
+      type="text"
+      name="name"
+      placeholder="this is name of recipe"
+      class="form-control"
+      [(ngModel)]="nameOfRecipe"
+    /> -->
+    <input
+      id="name"
+      type="text"
+      name="name"
+      placeholder="this is name of recipe"
+      class="form-control"
+      #nameOfRecipe
+    />
+  </div>
+  <div class="form-group">
+    <label for="description" class="col-form-label"
+      >this is description of recipe</label
+    >
+    <textarea
+      id="description"
+      type="text"
+      name="description"
+      placeholder="this is description of recipe"
+      class="form-control"
+      [(ngModel)]="descriptionOfRecipe"
+    ></textarea>
+  </div>
+  <div class="form-group">
+    <label for="imagePath" class="col-form-label"
+      >this is imagePath of recipe</label
+    >
+    <input
+      id="imagePath"
+      type="text"
+      name="image"
+      placeholder="this is pathOfRecipe of recipe"
+      class="form-control"
+      [(ngModel)]="pathOfRecipe"
+    />
+  </div>
+  <button
+    class="btn btn-success"
+    (click)="onclickForCreate(nameOfRecipe.value)"
+  >
+    New Recipe
+  </button>
+</form>
