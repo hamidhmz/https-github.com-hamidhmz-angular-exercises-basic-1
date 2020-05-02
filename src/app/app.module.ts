@@ -11,6 +11,9 @@ import { RecipeDetailComponent } from './recipes/recipe-detail/recipe-detail.com
 import { RecipeListComponent } from './recipes/recipe-list/recipe-list.component';
 import { RecipeItemComponent } from './recipes/recipe-list/recipe-item/recipe-item.component';
 import { RecipeCreateComponent } from './recipes/recipe-create/recipe-create.component';
+import { ViewChildComponent } from './view-child/view-child.component';
+import { NgContentComponent } from './ng-content/ng-content.component';
+import { LifecycleHooksComponent } from './lifecycle-hooks/lifecycle-hooks.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +26,9 @@ import { RecipeCreateComponent } from './recipes/recipe-create/recipe-create.com
     RecipeListComponent,
     RecipeItemComponent,
     RecipeCreateComponent,
+    ViewChildComponent,
+    NgContentComponent,
+    LifecycleHooksComponent,
   ],
   imports: [BrowserModule, FormsModule],
   providers: [],
