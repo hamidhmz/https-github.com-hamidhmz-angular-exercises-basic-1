@@ -7,5 +7,10 @@ import { Component, ViewEncapsulation } from '@angular/core';
   encapsulation: ViewEncapsulation.Emulated, // default behavior
 })
 export class AppComponent {
+  pageActive: 'recipes' | 'shopping';
+
+  page(page: 'recipes' | 'shopping') {
+    this.pageActive = page;
+  }
   title = 'test2';
 }

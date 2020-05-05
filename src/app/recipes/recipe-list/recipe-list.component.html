@@ -1,9 +1,13 @@
 <div class="row">
-  <div class="col-xs-12">
-    <app-recipe-create (createRecipe)="createNew($event)"></app-recipe-create>
-  </div>
+    <div class="col-xs-12">
+        <app-recipe-create
+            (createRecipe)="createNew($event)"
+        ></app-recipe-create>
+    </div>
 </div>
 <hr />
 <div class="m2" *ngFor="let item of recipes">
-  <app-recipe-item [element]="item"></app-recipe-item>
+    <a (click)="selectInToItem(item)" href="#">
+        <app-recipe-item [element]="item"></app-recipe-item>
+    </a>
 </div>

@@ -10,12 +10,14 @@ export class RecipeCreateComponent implements OnInit {
     nameOfRecipe;
     descriptionOfRecipe;
     pathOfRecipe;
+    ingredientOfRecipe;
   }>();
   constructor() {}
 
   nameOfRecipe: string;
   descriptionOfRecipe: string;
   pathOfRecipe: string;
+  ingredientOfRecipe: string;
 
   onclickForCreate(nameOfRecipe: string) {
     console.log(nameOfRecipe)
@@ -25,6 +27,7 @@ export class RecipeCreateComponent implements OnInit {
         nameOfRecipe: this.nameOfRecipe,
         descriptionOfRecipe: this.descriptionOfRecipe,
         pathOfRecipe: this.pathOfRecipe,
+        ingredientOfRecipe: this.ingredientOfRecipe,
       });
     }
   }

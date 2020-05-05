@@ -11,11 +11,7 @@ import { RecipeDetailComponent } from './recipes/recipe-detail/recipe-detail.com
 import { RecipeListComponent } from './recipes/recipe-list/recipe-list.component';
 import { RecipeItemComponent } from './recipes/recipe-list/recipe-item/recipe-item.component';
 import { RecipeCreateComponent } from './recipes/recipe-create/recipe-create.component';
-import { ViewChildComponent } from './view-child/view-child.component';
-import { NgContentComponent } from './ng-content/ng-content.component';
 import { LifecycleHooksComponent } from './lifecycle-hooks/lifecycle-hooks.component';
-import { NgContentTestComponent } from './ng-content-test/ng-content-test.component';
-import { NgContentChildTestComponent } from './ng-content-test/ng-content-child-test/ng-content-child-test.component';
 
 @NgModule({
   declarations: [
@@ -28,11 +24,7 @@ import { NgContentChildTestComponent } from './ng-content-test/ng-content-child-
     RecipeListComponent,
     RecipeItemComponent,
     RecipeCreateComponent,
-    ViewChildComponent,
-    NgContentComponent,
     LifecycleHooksComponent,
-    NgContentTestComponent,
-    NgContentChildTestComponent,
   ],
   imports: [BrowserModule, FormsModule],
   providers: [],

@@ -1,16 +1,12 @@
-<app-header></app-header>
+<app-header
+  (showRecipeEmit)="page('recipes')"
+  (showShoppingListEmit)="page('shopping')"
+></app-header>
 <div class="container">
   <div class="row">
     <div class="col-md-12">
-      <app-recipes></app-recipes>
-      <app-shopping-list></app-shopping-list>
+      <app-recipes *ngIf="pageActive === 'recipes'"></app-recipes>
+      <app-shopping-list *ngIf="pageActive === 'shopping'"></app-shopping-list>
     </div>
   </div>
 </div>
-<app-view-child></app-view-child>
-
-<app-ng-content>
-  <h1>this is my new content</h1>
-</app-ng-content>
-
-<app-ng-content-test></app-ng-content-test>
