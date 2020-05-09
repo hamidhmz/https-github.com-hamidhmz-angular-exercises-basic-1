@@ -5,20 +5,33 @@
 </div>
 <div class="row">
     <div class="col-xs-12">
-        <h1>Recipe Name</h1>
+        <h1>{{ name }}</h1>
     </div>
 </div>
 <div class="row">
     <div class="col-xs-12">
-        <div class="btn-group">
-            <button type="button" class="btn btn-primary dropdown-toggle">
-                Manage Recipe <span class="caret"></span>
+        <img src="{{ imageUrl }}" class="img-fluid img-thumbnail" alt="" />
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-12">
+        <div class="dropdown mr-1">
+            <button
+                type="button"
+                class="btn btn-secondary dropdown-toggle"
+                id="dropdownMenuOffset"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+                data-offset="10,20"
+            >
+                Offset
             </button>
-            <ul class="dropdown-menu">
-                <li><a href="#">To Shopping List</a></li>
-                <li><a href="#">Edit Recipe</a></li>
-                <li><a href="#">Delete Recipe</a></li>
-            </ul>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuOffset">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <a class="dropdown-item" href="#">Something else here</a>
+            </div>
         </div>
     </div>
 </div>
